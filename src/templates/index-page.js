@@ -31,14 +31,14 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
           adipiscing elit, sed do eiusmod
         </h3>
       </div>
-      <div
+      {/* <div
         className="hero-img"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
         }}
-      />
+      /> */}
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -105,13 +105,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         subheading
         description
@@ -119,3 +112,11 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// image {
+//   childImageSharp {
+//     fluid(maxWidth: 2048, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
