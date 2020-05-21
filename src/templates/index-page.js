@@ -10,50 +10,35 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        display: "flex",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column",
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
-          }}
-        >
-          {title}
+      <div className="header-text">
+        <h1 className="main-header is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+          {/* {title} */}
+          GREAT DOCTOR WITH A BIG HEART
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+        <hr
           style={{
-            boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
+            width: "540px",
+            margin: "0",
+            opacity: "0.3",
           }}
-        >
-          {subheading}
+        />
+        <h3 className="sub-header has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+          {/* {subheading} */}
+          Dr Israa's pesonal blog. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod
         </h3>
       </div>
+      <div
+        className="hero-img"
+        style={{
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
+        }}
+      />
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -86,11 +71,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -104,7 +85,6 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   );
