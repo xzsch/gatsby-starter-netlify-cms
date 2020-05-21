@@ -21,12 +21,12 @@ class BlogRoll extends React.Component {
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
-                      {/* <PreviewCompatibleImage
+                      <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         }}
-                      /> */}
+                      />
                     </div>
                   ) : null}
                   <p className="post-meta">
@@ -86,6 +86,13 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -95,11 +102,3 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 );
-
-// featuredimage {
-//   childImageSharp {
-//     fluid(maxWidth: 120, quality: 100) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
