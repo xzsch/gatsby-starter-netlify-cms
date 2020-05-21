@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Lorem ipsum dolor sit amet
-date: 2016-12-17T15:04:10.000Z
+date: 2020-05-21T21:39:30.858Z
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt
 featuredpost: false
