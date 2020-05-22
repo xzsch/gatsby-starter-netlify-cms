@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: GREAT DOCTOR WITH A BIG HEART
-image: /img/photo-1519160558534-579f5106e43f.jpeg
+image: /img/pp.jpeg
 heading: GREAT DOCTOR WITH A BIG HEART
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
