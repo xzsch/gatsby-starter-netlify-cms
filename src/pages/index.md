@@ -3,7 +3,8 @@ templateKey: index-page
 title: GREAT DOCTOR WITH A BIG HEART
 image: /img/pp.jpeg
 heading: GREAT DOCTOR WITH A BIG HEART
-subheading: Support sustainable farming while enjoying a cup
+subheading: Dr Israa's pesonal blog. Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit, sed do eiusmod
 mainpitch:
   title: Why Kaldi
   description: >
@@ -62,8 +63,6 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam
 ---
