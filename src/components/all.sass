@@ -224,18 +224,29 @@ $menu-label-color: $white-ter
   height: 150px
   padding: 0 100px
 
+.post-content *
+  text-align: center
+  width: 80%
 
-.post-content p:not(:first-child)
+.post-content p
+  text-align: start
   font-size: 18px
   line-height: 1.6
   width: 80%
   margin: 26px auto;
 
+
+.post-content img
+  display: none
+  width: 100%
+  height: auto
+  max-height: 500px
+  object-fit: cover; 
+
 .title
   font-family: 'Source Serif Pro', serif
 
 .post-description
-  text-align: center
   font-family: 'Source Serif Pro', serif
   opacity: 0.9
 
@@ -255,7 +266,7 @@ footer.footer
   padding: 0
 
 .footer-content
-  border-top: 1px solid #80808042
+  border-top: 1px solid #00000057
   padding-top: 15px
 
 .section
@@ -286,3 +297,45 @@ footer.footer
 
 .index-section
   margin-top: 100px
+
+.featured-image
+  width: 100%
+  height: auto
+  max-height: 500px
+  object-fit: cover
+  border-radius: 5px
+
+.post-header
+  display: flex
+  &__right
+    flex: 1
+    
+  &__left
+    width: 40%
+    margin-right: 100px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    & h1
+      font-size: 3.5rem
+
+.social-icons-header
+  z-index: 2
+  background: white
+  position: absolute
+  left: 15px
+
+.social-header
+  margin-top: 200px
+  position: relative
+
+.social-header::after
+  content: ""
+  width: 88%
+  height: 1px
+  background: #00000057
+  position: absolute
+  top: 10px
+
+.gatsby-image-wrapper
+  height: 120px

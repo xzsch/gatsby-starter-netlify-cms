@@ -26,19 +26,20 @@ export const BlogPostTemplate = ({
       <section className="section">
         {helmet || ""}
         <div className="container content">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="full-width-image">
-                <h1
-                  className="title is-size-2 has-text-weight-bold is-bold-light"
-                  style={{ textAlign: "center", fontSize: "3.2rem !important" }}
-                >
-                  {title}
-                </h1>
-                <p className="post-description">{description}</p>
-                <p className="post-date">{date}</p>
+          <div className="columns" style={{ margin: "0" }}>
+            <div className="">
+              <div className="post-header">
+                <div className="post-header__left">
+                  <h1 className="title has-text-weight-bold is-bold-light">
+                    {title}
+                  </h1>
+                  <p className="post-description">{description}</p>
+                  <p className="post-date">{date}</p>
+                </div>
+                <div className="post-header__right">
+                  <Img fluid={featuredImage} className="featured-image" />
+                </div>
               </div>
-              <Img fluid={featuredImage} />
 
               <PostContent className="post-content" content={content} />
               {tags && tags.length ? (
