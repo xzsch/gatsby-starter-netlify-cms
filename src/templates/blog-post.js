@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Img from "gatsby-image";
 
 export const BlogPostTemplate = ({
   content,
@@ -14,6 +15,8 @@ export const BlogPostTemplate = ({
   title,
   date,
   helmet,
+  featuredImage,
+  featuredpost,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -25,14 +28,18 @@ export const BlogPostTemplate = ({
         <div className="container content">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <h1
-                className="title is-size-2 has-text-weight-bold is-bold-light"
-                style={{ textAlign: "center", fontSize: "3.2rem !important" }}
-              >
-                {title}
-              </h1>
-              <p className="post-description">{description}</p>
-              <p className="post-date">{date}</p>
+              <div className="full-width-image">
+                <h1
+                  className="title is-size-2 has-text-weight-bold is-bold-light"
+                  style={{ textAlign: "center", fontSize: "3.2rem !important" }}
+                >
+                  {title}
+                </h1>
+                <p className="post-description">{description}</p>
+                <p className="post-date">{date}</p>
+              </div>
+              <Img fluid={featuredImage} />
+
               <PostContent className="post-content" content={content} />
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
@@ -72,6 +79,8 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         date={post.frontmatter.date}
+        featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
+        featuredpost={post.frontmatter.featuredpost}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -106,6 +115,14 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        featuredpost
       }
     }
   }
