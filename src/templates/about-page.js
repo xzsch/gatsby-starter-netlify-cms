@@ -10,11 +10,11 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <>
       <div className="spacer" />
-      <section className="section section--gradient" style={{ padding: "0" }}>
+      <section className="section section--gradient">
         <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
+          <div className="columns" style={{ margin: "0" }}>
+            <div className="">
+              <div>
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
