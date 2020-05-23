@@ -27,7 +27,7 @@ export const BlogPostTemplate = ({
         {helmet || ""}
         <div className="container content">
           <div className="columns" style={{ margin: "0" }}>
-            <div className="">
+            <div style={{ maxWidth: "1160px", width: "100%" }}>
               <div className="post-header">
                 <div className="post-header__left">
                   <h1 className="title has-text-weight-bold is-bold-light">
