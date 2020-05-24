@@ -228,14 +228,45 @@ $menu-label-color: $white-ter
   text-align: center
   width: 80%
 
+.post-header
+  display: flex
+  &__right
+    flex: 1
+    
+  &__left
+    width: 45%
+    margin-right: 0
+    display: flex
+    flex-direction: column
+    padding-top: 50px
+    & h1
+      font-size: 3.5rem
+      line-height: 1.2
+
+.featured-image
+  width: 100%
+  height: auto
+  max-height: 450px
+  object-fit: cover
+  border-radius: 5px
+
+
 .post-content p
   text-align: start
-  font-size: 18px
+  font-size: 22px
   line-height: 1.6
-  width: 70%
+  width: 65%
   max-width: 960px
-  margin: 26px auto;
+  margin: 26px auto
+  font-family: medium-content-serif-font, 'Georgia', 'Cambria', "Times New Roman", 'Times', serif
 
+.post-content p:nth-child(2)::first-letter
+  color: $kaldi-red
+  font-size: 5rem
+  margin-top: 0
+  margin: -30px 6px -33px 0px
+  float: left
+  text-transform: uppercase
 
 .post-content img
   display: none
@@ -244,16 +275,24 @@ $menu-label-color: $white-ter
   max-height: 500px
   object-fit: cover; 
 
-.title
-  font-family: 'Source Serif Pro', serif
-
 .post-description
-  font-family: 'Source Serif Pro', serif
+  // font-family: 'Source Serif Pro', serif
+  width: 75%
   opacity: 0.9
 
+
 .post-date
-  font-family: 'Source Serif Pro', serif
+  // font-family: 'Source Serif Pro', serif
   opacity: 0.7
+  margin-top: auto
+
+.post-content
+  & h1, h2, h3, h4, h5, h6
+    font-family: 'Playfair Display','Times New Roman','Georgia','Times',serif  
+
+.title
+  font-family: 'Playfair Display','Times New Roman','Georgia','Times',serif
+  font-weight: 400 !important
 
 .footer
   padding: 50px 0 !important
@@ -299,27 +338,6 @@ footer.footer
 .index-section
   margin-top: 100px
 
-.featured-image
-  width: 100%
-  height: auto
-  max-height: 500px
-  object-fit: cover
-  border-radius: 5px
-
-.post-header
-  display: flex
-  &__right
-    flex: 1
-    
-  &__left
-    width: 40%
-    margin-right: 100px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    & h1
-      font-size: 3.5rem
-
 .social-icons-header
   z-index: 2
   background: white
@@ -340,3 +358,28 @@ footer.footer
 
 .gatsby-image-wrapper
   height: 120px
+
+rect
+  fill: black
+
+.social-share
+  display: flex
+  flex-direction: column
+  width: 40px
+  position: absolute
+  margin-top: 10px
+
+  & button
+    margin-bottom: 20px
+    width: 40px
+    height: 40px
+
+  &__icon
+    width: 40px
+    height: 40px
+    border: 1px solid lightgray
+    border-radius: 50%
+    color: #706c6c
+
+button, button:active, button:focus
+  outline: none !important

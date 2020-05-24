@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
+import ShareButtons from "../components/ShareButtons";
 
 export const BlogPostTemplate = ({
   content,
@@ -40,8 +41,14 @@ export const BlogPostTemplate = ({
                   <Img fluid={featuredImage} className="featured-image" />
                 </div>
               </div>
-
-              <PostContent className="post-content" content={content} />
+              <div style={{ position: "relative", marginTop: "60px" }}>
+                <ShareButtons
+                  tags={tags}
+                  title={title}
+                  url={`https://inspiring-pasteur-55bacc.netlify.app`}
+                />
+                <PostContent className="post-content" content={content} />
+              </div>
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
                   <h4>Tags</h4>
