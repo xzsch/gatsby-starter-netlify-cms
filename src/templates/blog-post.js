@@ -26,6 +26,11 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <ShareButtons
+              tags={tags}
+              title={title}
+              url={`${siteMetadata.siteUrl}${slug}`}
+            />
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -63,6 +68,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        slug={post.fields.slug}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -97,6 +103,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+      fields {
+        slug
       }
     }
   }
