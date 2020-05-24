@@ -26,7 +26,7 @@ export const BlogPostTemplate = ({
       <section className="section">
         {helmet || ""}
         <div className="container content">
-          <div className="columns" style={{ margin: "0" }}>
+          <div className="columns" style={{ margin: "0px" }}>
             <div className="">
               <div className="post-header">
                 <div className="post-header__left">
