@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: "5px", height: "120px" };
-  const { alt = "", image } = imageInfo;
+  const { alt = "", childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
     return (
@@ -12,9 +12,9 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     );
   }
 
-  // if (!!childImageSharp) {
-  //   return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />;
-  // }
+  if (!!childImageSharp) {
+    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />;
+  }
 
   if (!!image && typeof image === "string")
     return <img style={imageStyle} src={image} alt={alt} />;
