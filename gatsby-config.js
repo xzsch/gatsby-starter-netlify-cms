@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dr Israa's personal blog`,
     description: `personal blog.`,
+    siteUrl: `https://inspiring-pasteur-55bacc.netlify.app`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",

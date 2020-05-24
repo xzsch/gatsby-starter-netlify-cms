@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
 import ShareButtons from "../components/ShareButtons";
+import useSiteMetadata from "../components/SiteMetadata";
 
 export const BlogPostTemplate = ({
   content,
@@ -17,9 +18,10 @@ export const BlogPostTemplate = ({
   date,
   helmet,
   featuredImage,
-  featuredpost,
+  slug,
 }) => {
   const PostContent = contentComponent || Content;
+  const siteMetadata = useSiteMetadata();
 
   return (
     <>
@@ -45,7 +47,7 @@ export const BlogPostTemplate = ({
                 <ShareButtons
                   tags={tags}
                   title={title}
-                  url={`https://inspiring-pasteur-55bacc.netlify.app`}
+                  url={`${siteMetadata.siteUrl}${slug}`}
                 />
                 <PostContent className="post-content" content={content} />
               </div>
@@ -79,6 +81,9 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const image = post.frontmatter.featuredimage
+    ? post.frontmatter.featuredimage.childImageSharp.fluid
+    : null;
 
   return (
     <Layout>
@@ -96,10 +101,12 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
+            <meta property="og:image" content={`${image}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
       />
     </Layout>
   );
@@ -131,6 +138,9 @@ export const pageQuery = graphql`
           }
         }
         featuredpost
+      }
+      fields {
+        slug
       }
     }
   }
