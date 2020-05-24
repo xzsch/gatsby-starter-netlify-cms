@@ -23,16 +23,20 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
+      <div className="spacer" />
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="post-header__left">
-              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                {title}
-              </h1>
-              <p className="post-description">{description}</p>
-              <p className="post-date">{date}</p>
+          <div style={{ maxWidth: "1160px", width: "100%" }}>
+            <div className="post-header">
+              <div className="post-header__left">
+                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                  {title}
+                </h1>
+                <p className="post-description">{description}</p>
+                <p className="post-date">{date}</p>
+              </div>
             </div>
+
             <div style={{ position: "relative", marginTop: "60px" }}>
               <ShareButtons
                 tags={tags}
