@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
+import useSiteMetadata from "../components/SiteMetadata";
 
 export const BlogPostTemplate = ({
   content,
@@ -14,8 +15,10 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content;
+  const siteMetadata = useSiteMetadata();
 
   return (
     <section className="section">
@@ -26,7 +29,8 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            <p className="post-description">{description}</p>
+            <p className="post-date">{date}</p>
             <ShareButtons
               tags={tags}
               title={title}
@@ -66,6 +70,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
+        date={post.frontmatter.date}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
