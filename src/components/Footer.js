@@ -17,7 +17,7 @@ const Footer = class extends React.Component {
             style={{ width: '14em', height: '10em' }}
           />
         </div> */}
-        <div className="content has-text-centered section">
+        <div className="footer-container content has-text-centered section">
           <div className="container footer-content">
             <div className="columns">
               <div className="column is-4 footer-column">

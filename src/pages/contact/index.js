@@ -38,7 +38,7 @@ export default class Index extends React.Component {
       <>
         <div className="spacer" />
         <Layout>
-          <section className="section">
+          <section className="section contact-container">
             <div className="container">
               <div className="content">
                 <h1>Contact</h1>

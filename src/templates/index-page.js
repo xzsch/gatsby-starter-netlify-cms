@@ -22,8 +22,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
           {/* {title} */}
           GREAT DOCTOR WITH A BIG HEART
         </h1>
-        <hr className="hero-horizontal" />
-        <h3 className="sub-header has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+        <h3 className="sub-header is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
           {/* {subheading} */}
           Dr Israa's pesonal blog. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod
@@ -78,14 +77,15 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
       />
     </div>
     <section className="index-section section section--gradient">
-      <div className="columns">
+      <div className="columns" style={{ margin: "0px" }}>
         <div className="content">
           <div className="column is-12" style={{ padding: "0" }}>
-            <h3 className="has-text-weight-semibold is-size-2">
-              Latest stories
-            </h3>
+            <h3 className="stories-header is-size-2">Latest stories</h3>
             <BlogRoll />
-            <div className="column is-12 has-text-centered">
+            <div
+              className="column is-12 has-text-centered"
+              style={{ marginTop: "60px" }}
+            >
               <Link className="btn" to="/blog">
                 Read more
               </Link>

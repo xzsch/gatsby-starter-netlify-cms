@@ -14,7 +14,7 @@ export default class BlogIndexPage extends React.Component {
           }}
         >
           <h1
-            className="has-text-weight-bold is-size-1"
+            className="blog-header has-text-weight-bold is-size-1"
             style={{
               backgroundColor: "#567888",
               color: "white",
@@ -24,7 +24,7 @@ export default class BlogIndexPage extends React.Component {
             Latest Stories
           </h1>
         </div>
-        <section className="section">
+        <section className="section" style={{ marginTop: "-100px" }}>
           <div className="container">
             <div className="content">
               <BlogRoll />

@@ -31,7 +31,7 @@ export const BlogPostTemplate = ({
           <div style={{ maxWidth: "1160px", width: "100%" }}>
             <div className="post-header">
               <div className="post-header__left">
-                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                <h1 className="post-title title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
                 <p className="post-description">{description}</p>
@@ -45,13 +45,16 @@ export const BlogPostTemplate = ({
               </div>
             </div>
 
-            <div style={{ position: "relative", marginTop: "60px" }}>
+            <div
+              className="post-content"
+              style={{ position: "relative", marginTop: "60px" }}
+            >
               <ShareButtons
                 tags={tags}
                 title={title}
                 url={`${siteMetadata.siteUrl}${slug}`}
               />
-              <PostContent content={content} />
+              <PostContent content={content} style={{ margin: "0 auto" }} />
             </div>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -132,7 +135,7 @@ export const pageQuery = graphql`
         tags
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1024, quality: 100, jpegQuality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
