@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
-import Img from "gatsby-image";
 import PreviewCompatibleImagePost from "../components/PreviewCompatibleImagePost";
 
 export const BlogPostTemplate = ({
@@ -40,13 +39,15 @@ export const BlogPostTemplate = ({
               </div>
               <div className="post-header__right">
                 {featuredImage ? (
-                  <div className="featured-image">
-                    <PreviewCompatibleImagePost
-                      imageInfo={{
-                        image: featuredImage,
-                        alt: `${title}`,
-                      }}
-                    />
+                  <div className="featured-thumbnail">
+                    <div className="featured-image">
+                      <PreviewCompatibleImagePost
+                        imageInfo={{
+                          image: featuredImage,
+                          alt: `${title}`,
+                        }}
+                      />
+                    </div>
                   </div>
                 ) : null}
               </div>
