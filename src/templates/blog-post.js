@@ -38,16 +38,18 @@ export const BlogPostTemplate = ({
                 <p className="post-date">{date}</p>
               </div>
               <div className="post-header__right">
-                <div
-                  className="hero-img"
-                  style={{
-                    backgroundImage: `url(${
-                      !!featuredImage.childImageSharp
-                        ? featuredImage.childImageSharp.fluid.src
-                        : featuredImage
-                    })`,
-                  }}
-                />
+                {featuredImage ? (
+                  <div
+                    className="hero-img"
+                    style={{
+                      backgroundImage: `url(${
+                        !!featuredImage.childImageSharp
+                          ? featuredImage.childImageSharp.fluid.src
+                          : featuredImage
+                      })`,
+                    }}
+                  />
+                ) : null}
               </div>
             </div>
 
