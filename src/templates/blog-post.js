@@ -79,7 +79,9 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
+  let featuredImgFluid = post.frontmatter.featuredImage
+    ? post.frontmatter.featuredImage.childImageSharp.fluid
+    : null;
 
   return (
     <Layout>
