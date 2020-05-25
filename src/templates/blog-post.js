@@ -40,14 +40,14 @@ export const BlogPostTemplate = ({
               <div className="post-header__right">
                 {featuredImage ? (
                   <div className="featured-thumbnail">
-                    <div className="featured-image">
-                      <PreviewCompatibleImagePost
-                        imageInfo={{
-                          image: featuredImage,
-                          alt: `${title}`,
-                        }}
-                      />
-                    </div>
+                    {/* <div className="featured-image"> */}
+                    <PreviewCompatibleImagePost
+                      imageInfo={{
+                        image: featuredImage,
+                        alt: `${title}`,
+                      }}
+                    />
+                    {/* </div> */}
                   </div>
                 ) : null}
               </div>
