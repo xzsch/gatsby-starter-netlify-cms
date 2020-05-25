@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
+import Img from "gatsby-image";
 
 export const BlogPostTemplate = ({
   content,
@@ -17,6 +18,7 @@ export const BlogPostTemplate = ({
   helmet,
   date,
   slug,
+  featuredImage,
 }) => {
   const PostContent = contentComponent || Content;
   const siteMetadata = useSiteMetadata();
@@ -34,6 +36,9 @@ export const BlogPostTemplate = ({
                 </h1>
                 <p className="post-description">{description}</p>
                 <p className="post-date">{date}</p>
+              </div>
+              <div className="post-header__right">
+                <Img fluid={featuredImage} className="featured-image" />
               </div>
             </div>
 
@@ -74,6 +79,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
 
   return (
     <Layout>
@@ -83,6 +89,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         slug={post.fields.slug}
+        featuredImage={featuredImgFluid}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -90,6 +97,7 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
+            <meta property="og:image" content={`${featuredImgFluid}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -117,6 +125,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug
