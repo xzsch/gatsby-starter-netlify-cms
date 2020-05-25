@@ -38,18 +38,13 @@ export const BlogPostTemplate = ({
                 <p className="post-date">{date}</p>
               </div>
               <div className="post-header__right">
-                {featuredImage ? (
-                  <div className="featured-thumbnail">
-                    {/* <div className="featured-image"> */}
-                    <PreviewCompatibleImagePost
-                      imageInfo={{
-                        image: featuredImage,
-                        alt: `${title}`,
-                      }}
-                    />
-                    {/* </div> */}
-                  </div>
-                ) : null}
+                <img
+                  src={
+                    !!featuredImage.childImageSharp
+                      ? featuredImage.childImageSharp.fluid.src
+                      : featuredImage
+                  }
+                />
               </div>
             </div>
 

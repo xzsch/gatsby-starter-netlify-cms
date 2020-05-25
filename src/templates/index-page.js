@@ -19,13 +19,10 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
     >
       <div className="header-text">
         <h1 className="main-header is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {/* {title} */}
-          GREAT DOCTOR WITH A BIG HEART
+          {title}
         </h1>
         <h3 className="sub-header is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {/* {subheading} */}
-          Dr Israa's pesonal blog. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod
+          {subheading}
         </h3>
         <div
           className="social-header social footer-column"
