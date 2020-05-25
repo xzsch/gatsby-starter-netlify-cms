@@ -8,6 +8,7 @@ import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
 import Img from "gatsby-image";
+import PreviewCompatibleImagePost from "../components/PreviewCompatibleImagePost";
 
 export const BlogPostTemplate = ({
   content,
@@ -38,17 +39,16 @@ export const BlogPostTemplate = ({
                 <p className="post-date">{date}</p>
               </div>
               <div className="post-header__right">
-                {!!featuredImage.childImageSharp ? (
-                  <Img
-                    fluid={featuredImage.childImageSharp.fluid}
-                    className="featured-image"
-                  />
-                ) : (
-                  <img src={featuredImage} className="featured-image" />
-                )}
-                {/* {featuredImage ? (
-                  <Img fluid={featuredImage} className="featured-image" />
-                ) : null} */}
+                {featuredImage ? (
+                  <div className="featured-image">
+                    <PreviewCompatibleImagePost
+                      imageInfo={{
+                        image: featuredImage,
+                        alt: `${title}`,
+                      }}
+                    />
+                  </div>
+                ) : null}
               </div>
             </div>
 
