@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Img from "gatsby-image";
 
 export const BlogPostTemplate = ({
   content,
@@ -38,16 +38,14 @@ export const BlogPostTemplate = ({
                 <p className="post-date">{date}</p>
               </div>
               <div className="post-header__right">
-                {featuredImage ? (
-                  <div className="featured-thumbnail">
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: featuredImage,
-                        alt: `featured image thumbnail for post ${title}`,
-                      }}
-                    />
-                  </div>
-                ) : null}
+                {!!featuredImage.childImageSharp ? (
+                  <Img
+                    fluid={featuredImage.childImageSharp.fluid}
+                    className="featured-image"
+                  />
+                ) : (
+                  <img src={featuredImage} className="featured-image" />
+                )}
                 {/* {featuredImage ? (
                   <Img fluid={featuredImage} className="featured-image" />
                 ) : null} */}
