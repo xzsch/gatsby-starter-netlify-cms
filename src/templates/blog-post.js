@@ -37,9 +37,9 @@ export const BlogPostTemplate = ({
                 <p className="post-description">{description}</p>
                 <p className="post-date">{date}</p>
               </div>
-              <div className="post-header__right">
+              {/* <div className="post-header__right">
                 <Img fluid={featuredImage} className="featured-image" />
-              </div>
+              </div> */}
             </div>
 
             <div style={{ position: "relative", marginTop: "60px" }}>
@@ -79,9 +79,9 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  let featuredImgFluid = post.frontmatter.featuredImage
-    ? post.frontmatter.featuredImage.childImageSharp.fluid
-    : null;
+  // let featuredImgFluid = post.frontmatter.featuredImage
+  //   ? post.frontmatter.featuredImage.childImageSharp.fluid
+  //   : null;
 
   return (
     <Layout>
@@ -91,7 +91,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         slug={post.fields.slug}
-        featuredImage={featuredImgFluid}
+        // featuredImage={featuredImgFluid}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -99,7 +99,7 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <meta property="og:image" content={`${featuredImgFluid}`} />
+            {/* <meta property="og:image" content={`${featuredImgFluid}`} /> */}
           </Helmet>
         }
         tags={post.frontmatter.tags}
