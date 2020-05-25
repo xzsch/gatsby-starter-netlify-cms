@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
-import PreviewCompatibleImagePost from "../components/PreviewCompatibleImagePost";
 
 export const BlogPostTemplate = ({
   content,
@@ -18,7 +17,6 @@ export const BlogPostTemplate = ({
   helmet,
   date,
   slug,
-  featuredImage,
 }) => {
   const PostContent = contentComponent || Content;
   const siteMetadata = useSiteMetadata();
@@ -30,40 +28,26 @@ export const BlogPostTemplate = ({
         <div className="columns" style={{ margin: "0px" }}>
           <div style={{ maxWidth: "1160px", width: "100%" }}>
             <div className="post-header">
-              <div className="post-header__left">
-                <h1 className="post-title title is-size-2 has-text-weight-bold is-bold-light">
-                  {title}
-                </h1>
-                <p className="post-description">{description}</p>
-                <p className="post-date">{date}</p>
-              </div>
-              <div className="post-header__right">
-                {featuredImage ? (
-                  <div
-                    className="hero-img"
-                    style={{
-                      backgroundImage: `url(${
-                        !!featuredImage.childImageSharp
-                          ? featuredImage.childImageSharp.fluid.src
-                          : featuredImage
-                      })`,
-                    }}
-                  />
-                ) : null}
-              </div>
-            </div>
-
-            <div
-              className="post-content"
-              style={{ position: "relative", marginTop: "60px" }}
-            >
+              <h1 className="post-title title is-size-2 has-text-weight-bold is-bold-light">
+                {title}
+              </h1>
+              <p className="post-description">{description}</p>
               <ShareButtons
                 tags={tags}
                 title={title}
                 url={`${siteMetadata.siteUrl}${slug}`}
               />
-              <PostContent content={content} style={{ margin: "0 auto" }} />
             </div>
+
+            <div className="post-content-container">
+              <div
+                className="post-content"
+                style={{ position: "relative", marginTop: "25px" }}
+              >
+                <PostContent content={content} style={{ margin: "0 auto" }} />
+              </div>
+            </div>
+
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>

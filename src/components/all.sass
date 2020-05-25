@@ -114,6 +114,7 @@ $menu-label-color: $white-ter
 
   & a
     color: $black !important
+    display: inline-block !important
 
 .social
   padding: 2em
@@ -273,14 +274,13 @@ $menu-label-color: $white-ter
 
 .post-title
   font-size: 3.5rem !important
+    width: 100%
   @media screen and (max-width: 1024px)
     font-size: 3rem !important
   @media screen and (max-width: 960px)
     font-size: 2.5rem !important
   @media screen and (max-width: 760px)
     font-size: 2rem !important
-    order: 2
-    width: 100%
 
 
 
@@ -288,30 +288,17 @@ $menu-label-color: $white-ter
   text-align: center
 
 .post-header
+  text-align: center
   display: flex
-  @media screen and (max-width: 760px)
-    flex-direction: column
-  &__right
-    flex: 1
+  flex-direction: column
+  margin-right: 0
+  display: flex
+  flex-direction: column
+  & h1
+    font-size: 3.5rem
+    line-height: 1.2
     @media screen and (max-width: 760px)
-      order: 1
-    
-  &__left
-    width: 45%
-    margin-right: 0
-    padding-right: 20px
-    display: flex
-    flex-direction: column
-    padding-top: 50px
-    @media screen and (max-width: 760px)
-      order: 2
-      width: 100%
-      padding-top: 0
-    & h1
-      font-size: 3.5rem
-      line-height: 1.2
-      @media screen and (max-width: 760px)
-        padding-top: 20px
+      padding-top: 20px
 
 .featured-image
   width: 100%
@@ -320,6 +307,10 @@ $menu-label-color: $white-ter
   object-fit: cover
   border-radius: 5px
 
+
+.post-content-container
+  display: flex
+  justify-content: center
 
 .post-content p
   text-align: start
@@ -338,7 +329,8 @@ $menu-label-color: $white-ter
     font-size: 16px
     margin: 0 auto
 
-
+.post-content p:first-child
+  width: 100%
 
 .post-content p:nth-child(2)::first-letter
   color: $primary
@@ -355,7 +347,6 @@ $menu-label-color: $white-ter
     margin: -10px 6px -33px 0px
 
 .post-content img
-  display: none
   width: 100%
   height: auto
   max-height: 500px
@@ -363,11 +354,7 @@ $menu-label-color: $white-ter
 
 .post-description
   // font-family: 'Source Serif Pro', serif
-  width: 75%
   opacity: 0.9
-  @media screen and (max-width: 760px)
-    order: 2
-    width: 100%
 
 
 .post-date
@@ -391,10 +378,6 @@ $menu-label-color: $white-ter
 
 .footer
   padding: 50px 0 !important
-
-footer.footer
-  margin-top: 100px
-
 
 .footer-content *
   margin: 0 
@@ -445,20 +428,15 @@ rect
 
 .social-share
   display: flex
-  flex-direction: column
-  width: 40px
-  margin-top: 35px
-  @media screen and (max-width: 560px)
-    flex-direction: row
-    justify-content: center
-    width: 100%
+  flex-direction: row
+  justify-content: center
+  width: 100%
+      
 
   & button
-    margin-bottom: 20px
     width: 40px
     height: 40px
-    @media screen and (max-width: 560px)
-      margin-right: 20px
+    margin-right: 20px
 
   &__icon
     width: 40px
