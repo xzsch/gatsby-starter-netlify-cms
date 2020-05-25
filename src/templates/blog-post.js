@@ -38,7 +38,10 @@ export const BlogPostTemplate = ({
                 <p className="post-date">{date}</p>
               </div>
               <div className="post-header__right">
-                <Img fluid={featuredImage} className="featured-image" />
+                {featuredImage ? (
+                  <Img fluid={featuredImage} className="featured-image" />
+                ) : null}
+                {/* <Img fluid={featuredImage} className="featured-image" /> */}
               </div>
             </div>
 
