@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
-import Img from "gatsby-image";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const BlogPostTemplate = ({
   content,
@@ -39,9 +39,18 @@ export const BlogPostTemplate = ({
               </div>
               <div className="post-header__right">
                 {featuredImage ? (
-                  <Img fluid={featuredImage} className="featured-image" />
+                  <div className="featured-thumbnail">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: featuredImage,
+                        alt: `featured image thumbnail for post ${title}`,
+                      }}
+                    />
+                  </div>
                 ) : null}
-                {/* <Img fluid={featuredImage} className="featured-image" /> */}
+                {/* {featuredImage ? (
+                  <Img fluid={featuredImage} className="featured-image" />
+                ) : null} */}
               </div>
             </div>
 
@@ -85,9 +94,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  let featuredImgFluid = post.frontmatter.featuredimage
-    ? post.frontmatter.featuredimage.childImageSharp.fluid
-    : null;
 
   return (
     <Layout>
@@ -97,7 +103,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         slug={post.fields.slug}
-        featuredImage={featuredImgFluid}
+        featuredImage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -105,7 +111,10 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <meta property="og:image" content={`${featuredImgFluid}`} />
+            <meta
+              property="og:image"
+              content={`${post.frontmatter.featuredimage.childImageSharp.fluid}`}
+            />
           </Helmet>
         }
         tags={post.frontmatter.tags}
