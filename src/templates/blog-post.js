@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
+import { withPrefix } from "gatsby";
 
 export const BlogPostTemplate = ({
   content,
@@ -96,7 +97,7 @@ const BlogPost = ({ data }) => {
             />
             <meta
               property="og:image"
-              content={`${post.frontmatter.featuredimage.childImageSharp.fluid}`}
+              content={`${withPrefix("/")}img/og-image.jpeg`}
             />
           </Helmet>
         }
