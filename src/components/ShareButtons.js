@@ -2,14 +2,14 @@ import React from "react";
 import {
   FacebookShareButton,
   FacebookIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
+  // LinkedinShareButton,
+  // LinkedinIcon,
   TwitterShareButton,
   TwitterIcon,
   WhatsappShareButton,
   WhatsappIcon,
-  RedditShareButton,
-  RedditIcon,
+  // RedditShareButton,
+  // RedditIcon,
 } from "react-share";
 
 export const ShareButtons = ({ twitterHandle, url, title, tags }) => (

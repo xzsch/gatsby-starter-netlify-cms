@@ -125,13 +125,6 @@ export const pageQuery = graphql`
         title
         description
         tags
-        featuredimage {
-          childImageSharp {
-            fluid(maxWidth: 1024, quality: 100, jpegQuality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
       fields {
         slug
