@@ -93,7 +93,7 @@ body
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
-
+  margin-top: auto
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
@@ -358,12 +358,17 @@ $menu-label-color: $white-ter
     top: 0
     font-size: 7rem
     color: $primary
+    @media screen and (max-width: 670px)
+      font-size: 5rem
+
   
 
 .content blockquote
   border-left: none
   background: none
   padding: 1.25em 3.5em
+  @media screen and (max-width: 670px)
+      padding: 1.25em 2.5em
 
 .post-content img
   width: 100%
@@ -497,3 +502,27 @@ button, button:active, button:focus
     padding: 0 20px
   @media screen and (max-width: 430px)
     padding: 0 10px
+
+.taglist h2
+  font-family: Playfair Display,Times New Roman,Georgia,Times,serif !important
+  text-decoration: underline
+  font-weight: 400
+  font-size: 2rem !important
+  color: $secondary
+
+.content .taglist
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0
+  & li
+    padding: 0
+
+.not-found
+  padding: 0 100px
+
+.post-tags ul
+  display: block !important
+  margin-left: 20px !important
+  li
+    margin: 0 !important

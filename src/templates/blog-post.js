@@ -57,17 +57,11 @@ export const BlogPostTemplate = ({
                 <p>
                   <a>lorem ipsum whatever</a>
                 </p>
-                <h1>Dui sapien eget mi proin sed</h1>
-                <h2>Dui sapien eget mi proin sed</h2>
-                <h3>Dui sapien eget mi proin sed</h3>
-                <h4>Dui sapien eget mi proin sed</h4>
-                <h5>Dui sapien eget mi proin sed</h5>
-                <h6>Dui sapien eget mi proin sed</h6>
               </div>
             </div>
 
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className="post-tags" style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
