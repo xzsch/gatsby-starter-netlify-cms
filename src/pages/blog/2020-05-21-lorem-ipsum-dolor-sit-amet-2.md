@@ -1,23 +1,34 @@
 ---
 templateKey: blog-post
-title: Lorem ipsum dolor sit amet
+title: تفسيرات من وجهة نظري الشخصية
 date: 2020-05-21T21:39:36.768Z
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt
+description: بعض التفكير المنطقي في الأوقات اللي زي دي كفيل إنه يعدل دفة
+  التصرفات المبنية على الخوف والخوف فقط..
 featuredpost: false
 featuredimage: /img/ifrah-akhter-at9jzhq30ik-unsplash.jpg
 tags:
-  - lorem
-  - ipsum
+  - books
 ---
 ![](/img/ifrah-akhter-at9jzhq30ik-unsplash.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Est velit egestas dui id ornare. Sed enim ut sem viverra aliquet eget sit amet tellus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Commodo elit at imperdiet dui accumsan sit. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Ac turpis egestas maecenas pharetra convallis posuere. Est placerat in egestas erat imperdiet sed. Sit amet justo donec enim. Metus dictum at tempor commodo. Neque aliquam vestibulum morbi blandit cursus risus.
+> People are only mean when they're threatened, and that's what our culture does. That's what our economy does. Even people who have jobs in our economy are threatened, because they worry about losing them. And when you get threatened, you start looking out only for yourself... It is all part of this culture.  
+>
+> Tuesdays with Morrie - Mitch Albom
 
-Ut placerat orci nulla pellentesque dignissim. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Velit laoreet id donec ultrices tincidunt arcu non sodales. Lectus mauris ultrices eros in cursus. Elementum nisi quis eleifend quam. Maecenas accumsan lacus vel facilisis. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Sit amet tellus cras adipiscing enim eu turpis egestas pretium.
+قرأت الكلمتين دول النهاردة بالصدفة، وجه في بالي ساعتها نظرة كتير من الناس المليئة بال stigma لمصابي الكورونا، واللي مكونتش قادرة أفهمسببها الحقيقة، لحد ما قرأت الكلام ده ونوعا ما إداني تفسير -مش تبرير- لنظرات وتصرفات الناس دي..
 
-Dui sapien eget mi proin sed. Pulvinar mattis nunc sed blandit libero volutpat. Mattis nunc sed blandit libero volutpat. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Donec ac odio tempor orci dapibus. Ac felis donec et odio pellentesque diam volutpat. Sit amet mauris commodo quis imperdiet. Consequat semper viverra nam libero. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Urna duis convallis convallis tellus id interdum velit.
+فيه ناس كتير مهددة بفقدان وظائفهم -وفيه بالفعل ناس اتسرحوا- .. الناس المهددة غالبا بيفكروا في إنه لو اتصابوا أو خالطوا حد مصاب ده بيزود احتمالية إنه يمشي من الشغل لو ده فعلا حصل، وبالتالي أسلوب التعامل الفج ده بيكون رد فعل منه -مبالغ فيه- على الخوف اللي حقيقي مش مبالغ فيه.
 
-Nunc mattis enim ut tellus elementum sagittis vitae et. At auctor urna nunc id. Vel pharetra vel turpis nunc. Tortor at auctor urna nunc. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Pellentesque elit eget gravida cum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Lectus mauris ultrices eros in cursus turpis. Aenean pharetra magna ac placerat vestibulum. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Vitae ultricies leo integer malesuada nunc. Ultricies mi quis hendrerit dolor magna eget. Proin libero nunc consequat interdum.
+فيه تفسير تاني ممكن يكون ليه علاقة بثقافة أغلب مجتمعنا؛ الناس عادة معندهاش مشكلة في الأمراض الجسمانية الملموسة اللي ليها أعراض واضحة ومعروفة وعلاجها كذلك محدد ومعروف، كمثال على كده مفيش حد بيحط stigma على مريض سكر أو ضغط أو فشل كلوي مثلا. في حين إن مرض زي السرطان بأنواعه المختلفة، ناس كتير بتشوفه وصمة أو stigma، وهتلاقي ناس لحد دلوقتي لسه بتقول عليه "المرض الوحش" لما ييجي ذكر أي حاجة ليها علاقة بيه. نفس الكلام ينطبق على الأمراض النفسية، اللي ناس كتير بتشوفها بنفس النظرة الواصمة -وإن كان ده قل شوية في الفترة الأخيرة- نتيجة لاختلاف الأعراض حتى في التشخيص الواحد، وظهور بعض التصرفات اللي ممكن تتفسر بحكم ثقافة ناس كتير على إنها مس أو جن، وده سبب جزء كبير من ال stigma.
 
-Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Neque ornare aenean euismod elementum nisi. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Lacus viverra vitae congue eu consequat ac felis. Donec enim diam vulputate ut pharetra sit amet. A diam sollicitudin tempor id eu. Maecenas accumsan lacus vel facilisis volutpat. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Eget est lorem ipsum dolor sit amet consectetur adipiscing elit. Urna porttitor rhoncus dolor purus non enim praesent elementum facilisis. Tellus integer feugiat scelerisque varius morbi. At quis risus sed vulputate odio ut. Donec et odio pellentesque diam volutpat commodo sed. In metus vulputate eu scelerisque felis imperdiet proin fermentum.
+لو طبقنا نفس الكلام على الكورونا، هنلاقي إنه انتشر بداية في الصين بسبب موضوع أكل الخفافيش، ومن ساعتها انتشاره في ازدياد بصورة كبيرة جدا، أعراضه نوعا ما واضحة وإن كان فيها تشابه في بعض الأحيان مع أعراض البرد العادي، وفوق كل ده، مفيش علاج أو مصل واضح وكلها تجارب لسه. فيه ناس بتموت؟ آه فيه.. الدنيا وقفت؟ آه.. لحد امتى؟ محدش عارف.. كل النقط اللي فوق دي كفيلة إنها تخلي بعض الناس، خصوصا اللي مش فاهمين أو بياخدوا معلوماتهم من مصادر غير مختصة، ممكن تتصرف بالشكل ده مع أي حد مصاب أو محتمل إصابته..
+
+كل دي تفسيرات من وجهة نظري الشخصية، قد تخطئ وقد تصيب.
+
+هل ده كله مبرر للتصرف بالشكل ده؟ طبعا لأ.
+
+بعض التفكير المنطقي في الأوقات اللي زي دي كفيل إنه يعدل دفة التصرفات المبنية على الخوف والخوف فقط..
+
+بس الناس تفكر..
+
+[](https://www.facebook.com/ufi/reaction/profile/browser/?ft_ent_identifier=ZmVlZGJhY2s6MTAxNjM1MTM1OTY5NzAxNDU%3D&av=100007123639235)
