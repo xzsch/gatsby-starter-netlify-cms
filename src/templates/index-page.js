@@ -5,6 +5,7 @@ import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
+import { withPrefix } from "gatsby";
 
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
@@ -18,6 +19,16 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
       }}
     >
       <div className="header-text">
+        <div
+          style={{
+            marginBottom: "30px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
+          <img className="avatar" src={`${withPrefix("/")}img/avatar.png`} />
+        </div>
         <h1 className="main-header is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
           {title}
         </h1>

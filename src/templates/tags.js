@@ -34,10 +34,11 @@ class TagRoute extends React.Component {
                 >
                   <h3
                     style={{
-                      padding: "20px",
+                      padding: "10px 20px 20px 20px",
                       backgroundColor: "#567888",
                       color: "white",
                       display: "inline-block",
+                      fontFamily: `"Aref Ruqaa", serif`,
                     }}
                     className="is-size-2 is-bold-light"
                   >

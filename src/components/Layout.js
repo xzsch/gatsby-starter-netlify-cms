@@ -27,6 +27,16 @@ const TemplateWrapper = ({ children }) => {
         />
 
         <link
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix("/")}img/apple-touch-icon.png`}

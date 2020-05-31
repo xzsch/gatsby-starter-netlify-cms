@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ShareButtons from "../components/ShareButtons";
 import useSiteMetadata from "../components/SiteMetadata";
-import { withPrefix } from "gatsby";
 
 export const BlogPostTemplate = ({
   content,
@@ -22,14 +21,14 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
   const siteMetadata = useSiteMetadata();
   return (
-    <section className="section">
+    <section className="section" dir="auto">
       {helmet || ""}
       <div className="spacer" />
       <div className="container content">
         <div className="columns" style={{ margin: "0px" }}>
           <div style={{ maxWidth: "1160px", width: "100%" }}>
             <div className="post-header">
-              <h1 className="post-title title is-size-2 has-text-weight-bold is-bold-light">
+              <h1 className="post-title is-size-2 has-text-weight-bold is-bold-light">
                 {title}
               </h1>
               <p className="post-description">{description}</p>
@@ -89,6 +88,10 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const featuredImage =
+    post.frontmatter.featuredimage === undefined
+      ? post.frontmatter.featuredImage.childImageSharp.fluid
+      : null;
 
   return (
     <Layout>
@@ -106,10 +109,7 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <meta
-              property="og:image"
-              content={`${withPrefix("/")}img/og-image.jpeg`}
-            />
+            <meta property="og:image" content={featuredImage} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -137,6 +137,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug

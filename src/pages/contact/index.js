@@ -41,7 +41,15 @@ export default class Index extends React.Component {
           <section className="section contact-container">
             <div className="container">
               <div className="content">
-                <h1>Contact</h1>
+                <h1
+                  style={{
+                    fontFamily: `"Aref Ruqaa", serif`,
+                    color: "#567888",
+                    marginBottom: "30px",
+                  }}
+                >
+                  Contact
+                </h1>
                 <form
                   name="contact"
                   method="post"
