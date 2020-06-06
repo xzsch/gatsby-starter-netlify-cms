@@ -12,8 +12,8 @@ tags:
 ![](/img/ifrah-akhter-at9jzhq30ik-unsplash.jpg)
 
 > People are only mean when they're threatened, and that's what our culture does. That's what our economy does. Even people who have jobs in our economy are threatened, because they worry about losing them. And when you get threatened, you start looking out only for yourself... It is all part of this culture.  
->
-> Tuesdays with Morrie - Mitch Albom
+
+Tuesdays with Morrie - Mitch Albom
 
 قرأت الكلمتين دول النهاردة بالصدفة، وجه في بالي ساعتها نظرة كتير من الناس المليئة بال stigma لمصابي الكورونا، واللي مكونتش قادرة أفهمسببها الحقيقة، لحد ما قرأت الكلام ده ونوعا ما إداني تفسير -مش تبرير- لنظرات وتصرفات الناس دي..
 
