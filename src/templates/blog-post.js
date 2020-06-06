@@ -45,6 +45,7 @@ export const BlogPostTemplate = ({
                 style={{ position: "relative", marginTop: "25px" }}
               >
                 <PostContent content={content} style={{ margin: "0 auto" }} />
+                <blockquote style={{ display: "none" }}>asd</blockquote>
               </div>
             </div>
 
