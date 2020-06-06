@@ -573,12 +573,12 @@ blockquote
   position: relative
   font-family: medium-content-serif-font, 'Georgia', 'Cambria', "Times New Roman", 'Times', serif
   & p
-    text-align: center
+    text-align: center !important
   &::before
     content: "\201C"
     position: absolute
     left: 0
-    top: -40px
+    top: -20px
     font-size: 6rem
     color: $primary
     @media screen and (max-width: 670px)
@@ -587,7 +587,7 @@ blockquote
     content: "\201D"
     position: absolute
     right: 0
-    bottom: -40px
+    bottom: -20px
     font-size: 6rem
     color: $primary
     @media screen and (max-width: 670px)
