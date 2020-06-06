@@ -45,17 +45,6 @@ export const BlogPostTemplate = ({
                 style={{ position: "relative", marginTop: "25px" }}
               >
                 <PostContent content={content} style={{ margin: "0 auto" }} />
-                <blockquote>
-                  <p>
-                    Dui sapien eget mi proin sed. Pulvinar mattis nunc sed
-                    blandit libero volutpat. Mattis nunc sed blandit libero
-                    volutpat. Eu scelerisque felis imperdiet proin fermentum leo
-                    vel orci. Donec ac odio
-                  </p>
-                </blockquote>
-                <p>
-                  <a>lorem ipsum whatever</a>
-                </p>
               </div>
             </div>
 
