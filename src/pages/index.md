@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: GREAT DOCTOR WITH A BIG HEART
+title: المكان المخصص للهري
 image: /img/og-image.jpeg
-heading: GREAT DOCTOR WITH A BIG HEART
+heading: هري لا بد منه
 subheading: Dr Israa's pesonal blog. Lorem ipsum dolor sit amet, consectetur
   adipiscing elit, sed do eiusmod
 mainpitch:
